@@ -84,7 +84,7 @@ Type: `Zet|Set`
 Set B of type `Zet` or `Set`.
 
 
-### union(...sets)
+### instace.union(...sets)
 Returns:`zet`<br>
 
 Variadic method that return a new set with elements from `this` and all other `sets`.
@@ -94,7 +94,7 @@ Type: `Zet|Set`
 
 One or more sets of type `Zet` or `Set`.
 
-### intersection(...sets)
+### instance.intersection(...sets)
 Returns:`zet`<br>
 
 Variadic method that return a new set with elements common to `this` and all other `sets`.
@@ -104,7 +104,7 @@ Type: `Zet|Set`
 
 One or more sets of type `Zet` or `Set`.
 
-### difference(...sets)
+### instance.difference(...sets)
 Returns:`zet`<br>
 
 Variadic method tht return a new set with elements in `this` that are not in the other `sets`.
@@ -114,7 +114,7 @@ Type: `Zet|Set`
 
 One or more sets of type `Zet` or `Set`.
 
-### symmetricDifference(other)
+### instance.symmetricDifference(other)
 Returns:`zet`<br>
 
 Method that return a new set with elements in either `this` or `other` but not both.
