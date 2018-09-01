@@ -1,8 +1,27 @@
-# Zet [![Build Status](https://travis-ci.org/terkelg/zet.svg?branch=master)](https://travis-ci.org/terkelg/zet)
+<p align="center">
+  <img src="zet.png" alt="zet" width="300" />
+</p>
+
+<p align="center">
+  <a href="https://npmjs.org/package/zet">
+    <img src="https://badgen.now.sh/npm/v/zet" alt="version" />
+  </a>
+  <a href="https://travis-ci.org/terkelg/zet">
+    <img src="https://badgen.now.sh/travis/terkelg/zet" alt="travis" />
+  </a>
+  <a href="https://npmjs.org/package/zet">
+    <img src="https://badgen.now.sh/npm/dm/zet" alt="downloads" />
+  </a>
+  <a href="https://packagephobia.now.sh/result?p=zet">
+    <img src="https://packagephobia.now.sh/badge?p=zet" alt="install size" />
+  </a>
+</p>
+
+<p align="center">JavaScript Set() as it should be</div>
 
 > Set() as it should be
 
-Extension of the ES6 `Set()` with features such as union, intersection and difference included.
+Extension of ES6 `Set()` with features such as union, intersection and difference included.
 
 The API is similar to Sets in [Python](https://docs.python.org/2/library/stdtypes.html#set).
 
@@ -117,7 +136,7 @@ One or more sets of type `Zet` or `Set`.
 ### instance.symmetricDifference(other)
 Returns:`zet`<br>
 
-Method that return a new set with elements in either `this` or `other` but not both.
+Method that return a new set with elements in either `this` or `other` but not both. This is also known as xor.
 
 #### other
 Type: `Zet|Set`
