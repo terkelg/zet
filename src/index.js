@@ -18,11 +18,13 @@ class Zet extends Set {
     return new Zet([...[...setA].filter(x => !setB.has(x)), ...[...setB].filter(x => !setA.has(x))]);
   }
 
-  // subset(setA, setB)
+  static subset(setA, setB) {
+    return [...setA].every(x => setB.has(x));
+  }
 
-  // setB.every(x => setA.includes(x))
-  
-  // superset
+  static superset(setA, setB) {
+    return [...setB].every(x => setA.has(x));
+  }
 
   union(...sets) {
     return Zet.union(this, ...sets);
@@ -36,8 +38,16 @@ class Zet extends Set {
     return Zet.difference(this, ...sets);
   }
 
-  symmetricDifference(...sets) {
-    return Zet.symmetricDifference(this, ...sets);
+  symmetricDifference(other) {
+    return Zet.symmetricDifference(this, other);
+  }
+
+  subset(other) {
+    return Zet.subset(this, other);
+  }
+
+  superset(other) {
+    return Zet.superset(this, other);
   }
 }
 
