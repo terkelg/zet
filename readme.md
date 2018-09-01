@@ -107,7 +107,7 @@ Type: `Zet|Set`
 
 Set B of type `Zet` or `Set`.
 
-### subset(setA, setB)
+### Zet.subset(setA, setB)
 Returns: `Boolean`
 
 Test whether every element in `setB` is in `setA`.
@@ -122,7 +122,7 @@ Type: `Zet|Set`
 
 Set of type `Zet` or `Set`.
 
-### superset(setA, setB)
+### Zet.superset(setA, setB)
 Returns: `Boolean`
 
 Test whether every element in `setA` is in `setB`.
