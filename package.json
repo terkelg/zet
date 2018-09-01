@@ -1,0 +1,30 @@
+{
+  "name": "zet",
+  "version": "1.0.0-0",
+  "repository": "terkelg/zet",
+  "description": "Like Set() but with union, intersect, and difference built-in",
+  "module": "dist/zet.mjs",
+  "main": "dist/zet.js",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "node builder",
+    "pretest": "npm run build",
+    "test": "tape test/*.js | tap-spec"
+  },
+  "keywords": [
+    "set",
+    "sets",
+    "intersect",
+    "difference",
+    "union"
+  ],
+  "devDependencies": {
+    "mkdirplz": "0.0.2",
+    "rewrite-imports": "^1.1.1",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.9.1"
+  }
+}
