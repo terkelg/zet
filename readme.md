@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="zet.png" alt="zet" width="300" />
+  <img src="zet.png" alt="zet" width="200" />
 </p>
 
 <p align="center">
@@ -17,13 +17,11 @@
   </a>
 </p>
 
-<p align="center">JavaScript Set() as it should be</div>
-
-> Set() as it should be
+<p align="center"><b>JavaScript Set() as it should be</b></p>
 
 Extension of ES6 `Set()` with features such as union, intersection and difference included.
 
-The API is similar to Sets in [Python](https://docs.python.org/2/library/stdtypes.html#set).
+The API is similar to how sets work in [Python](https://docs.python.org/2/library/stdtypes.html#set).
 
 ## Install
 
