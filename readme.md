@@ -19,11 +19,9 @@
 
 <p align="center"><b>JavaScript Set() as it should be.</b></p>
 
-ECMAScript 6 sets have no methods for computing the union (∪), intersection (∩) or difference (⊖).
+ECMAScript 6 sets have no methods for computing the union (∪), intersection (∩) or difference (⊖). Zet is an extension of ES6 [`Set`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) with such features included. The API is similar to how sets work in [Python](https://docs.python.org/2/library/stdtypes.html#set).
 
-Zet is an extension of ES6 [`Set`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) with such features included. The API is similar to how sets work in [Python](https://docs.python.org/2/library/stdtypes.html#set).
-
-Additions to the default ECMAScript 6 set:
+**Additions to the default ECMAScript 6 set**
 - **∪** union
 - **∩** intersection
 - **-** difference/subtract
