@@ -12,6 +12,7 @@
   "scripts": {
     "build": "node builder",
     "pretest": "npm run build",
+    "prepublishOnly": "npm run build",
     "test": "tape test/*.js | tap-spec"
   },
   "keywords": [
