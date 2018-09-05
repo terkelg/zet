@@ -44,12 +44,23 @@ const Zet = require('zet');
 
 let a = new Zet([1, 2, 3]);
 let b = new Zet([3, 4, 5]);
+let c = new Zet([2, 3, 4]);
 
 Zet.union(a, b);
 //=> [Zet] {1, 2, 3, 4, 5}
 
+a.union(b, c);
+//=> [Zet] {1, 2, 3, 4, 5}
+
 a.intersection(b);
 //=> [Zet] {3}
+
+a.symmetricDifference(c);
+//=> [Zet] {1, 4}
+
+a.subset(b);
+//=> false
+
 ```
 
 
