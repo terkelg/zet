@@ -28,6 +28,7 @@ ECMAScript 6 sets have no methods for computing the union (∪), intersection (�
 - **⊖** symmetric difference
 - **⊆** subset
 - **⊇** superset
+- filter
 
 
 ## Install
@@ -60,6 +61,9 @@ a.symmetricDifference(c);
 
 a.subset(b);
 //=> false
+
+a.filter(i => i % 2);
+//=> [Zet] {1, 3}
 
 ```
 
@@ -148,6 +152,19 @@ Type: `Zet|Set`
 
 Set of type `Zet` or `Set`.
 
+### filter(set, func)
+Returns: `Zet|Set`
+
+Creates a set with all elements that pass the test implemented by the provided function.
+
+#### set
+Type: `Zet|Set`
+It is the set going to be examined.
+
+#### func
+Type: `Function`
+
+It is a predicate, to test each element of the set.
 
 ## Instance Methods
 
@@ -211,6 +228,15 @@ Type: `Zet|Set`
 
 Set of type `Zet` or `Set`.
 
+### filter(func)
+Returns: `Zet|Set`
+
+Creates a set with all elements that pass the test implemented by the provided function.
+
+#### func
+Type: `Function`
+
+It is a predicate, to test each element of the set.
 
 ## License
 
