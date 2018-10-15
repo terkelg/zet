@@ -7,8 +7,8 @@ const eq = (t, a, b) => {
 };
 
 test('exports', t => {
-	t.is(typeof Zet, 'function', '~> a function');
-	t.end();
+  t.is(typeof Zet, 'function', '~> a function');
+  t.end();
 });
 
 test('basic', t => {
@@ -25,7 +25,7 @@ test('static :: union ∪', t => {
   eq(t, Zet.union(x), [1,2,3]);
   eq(t, Zet.union(x, y), [1,2,3,4]);
   eq(t, Zet.union(x, y, z), [1,2,3,4,5,6]);
-	t.end();
+  t.end();
 });
 
 test('static :: intersection ∩', t => {
@@ -35,7 +35,7 @@ test('static :: intersection ∩', t => {
   eq(t, Zet.intersection(x), [1,2,3]);
   eq(t, Zet.intersection(x, y), [2,3]);
   eq(t, Zet.intersection(x, y, z), [3]);
-	t.end();
+  t.end();
 });
 
 test('static :: difference -', t => {
@@ -48,7 +48,7 @@ test('static :: difference -', t => {
   eq(t, Zet.difference(x, z), [1, 2]);
   eq(t, Zet.difference(x, y, z), [1]);
   eq(t, Zet.difference(x, y, z, w), []);
-	t.end();
+  t.end();
 });
 
 test('static :: symmetricDifference \\', t => {
@@ -60,7 +60,7 @@ test('static :: symmetricDifference \\', t => {
   eq(t, Zet.symmetricDifference(x, y), [1,4]);
   eq(t, Zet.symmetricDifference(x, z), [1,2,4,5]);
   eq(t, Zet.symmetricDifference(z, w), [3,4,5,1,6,7]);
-	t.end();
+  t.end();
 });
 
 test('static :: subset ⊆', t => {
@@ -69,7 +69,7 @@ test('static :: subset ⊆', t => {
   t.ok(Zet.subset(x,y));
   t.ok(Zet.subset(x,x));
   t.notOk(Zet.subset(y,x));
-	t.end();
+  t.end();
 });
 
 test('static :: superset ⊇', t => {
@@ -78,7 +78,13 @@ test('static :: superset ⊇', t => {
   t.ok(Zet.superset(x,y));
   t.ok(Zet.superset(x,x));
   t.notOk(Zet.superset(y,x));
-	t.end();
+  t.end();
+});
+
+test('static :: filter', t => {
+  let x = new Zet([1,2,3]);
+  eq(t, Zet.filter(x, i => i % 2), [1, 3]);
+  t.end();
 });
 
 test('instance :: union ∩', t => {
@@ -88,7 +94,7 @@ test('instance :: union ∩', t => {
   eq(t, x.union(), [1,2,3]);
   eq(t, x.union(y), [1,2,3,4]);
   eq(t, x.union(y, z), [1,2,3,4,5,6]);
-	t.end();
+  t.end();
 });
 
 test('instance :: intersection ∩', t => {
@@ -98,7 +104,7 @@ test('instance :: intersection ∩', t => {
   eq(t, x.intersection(), [1,2,3]);
   eq(t, x.intersection(y), [2,3]);
   eq(t, x.intersection(y, z), [3]);
-	t.end();
+  t.end();
 });
 
 test('instance :: difference -', t => {
@@ -111,7 +117,7 @@ test('instance :: difference -', t => {
   eq(t, x.difference(z), [1, 2]);
   eq(t, x.difference(y, z), [1]);
   eq(t, x.difference(y, z, w), []);
-	t.end();
+  t.end();
 });
 
 test('instance :: symmetricDifference \\', t => {
@@ -123,7 +129,7 @@ test('instance :: symmetricDifference \\', t => {
   eq(t, x.symmetricDifference(y), [1,4]);
   eq(t, x.symmetricDifference(z), [1,2,4,5]);
   eq(t, z.symmetricDifference(w), [3,4,5,1,6,7]);
-	t.end();
+  t.end();
 });
 
 test('instance :: subset ⊆', t => {
@@ -132,7 +138,7 @@ test('instance :: subset ⊆', t => {
   t.ok(x.subset(y));
   t.ok(x.subset(x));
   t.notOk(y.subset(x));
-	t.end();
+  t.end();
 });
 
 test('instance :: superset ⊇', t => {
@@ -141,5 +147,11 @@ test('instance :: superset ⊇', t => {
   t.ok(x.superset(y));
   t.ok(x.superset(x));
   t.notOk(y.superset(x));
-	t.end();
+  t.end();
+});
+
+test('instance :: filter', t => {
+  let x = new Zet([1,2,3]);
+  eq(t, x.filter(i => i % 2), [1, 3]);
+  t.end();
 });

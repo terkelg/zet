@@ -26,6 +26,10 @@ class Zet extends Set {
     return [...setB].every(x => setA.has(x));
   }
 
+  static filter(set, func) {
+    return new Zet([...set].filter(func));
+  }
+
   union(...sets) {
     return Zet.union(this, ...sets);
   }
@@ -48,6 +52,10 @@ class Zet extends Set {
 
   superset(other) {
     return Zet.superset(this, other);
+  }
+
+  filter(func) {
+    return Zet.filter(this, func);
   }
 }
 
