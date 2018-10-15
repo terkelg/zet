@@ -81,6 +81,12 @@ test('static :: superset ⊇', t => {
   t.end();
 });
 
+test('static :: filter', t => {
+  let x = new Zet([1,2,3]);
+  eq(t, Zet.filter(x, i => i % 2), [1, 3]);
+  t.end();
+});
+
 test('instance :: union ∩', t => {
   let x = new Zet([1,2,3]);
   let y = new Zet([2,3,4]);
@@ -141,5 +147,11 @@ test('instance :: superset ⊇', t => {
   t.ok(x.superset(y));
   t.ok(x.superset(x));
   t.notOk(y.superset(x));
+  t.end();
+});
+
+test('instance :: filter', t => {
+  let x = new Zet([1,2,3]);
+  eq(t, x.filter(i => i % 2), [1, 3]);
   t.end();
 });
