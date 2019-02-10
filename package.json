@@ -23,9 +23,9 @@
     "union"
   ],
   "devDependencies": {
-    "mkdirplz": "0.0.2",
-    "rewrite-imports": "^1.1.1",
+    "mkdirplz": "1.0.0",
+    "rewrite-imports": "^2.0.1",
     "tap-spec": "^5.0.0",
-    "tape": "^4.9.1"
+    "tape": "^4.10.0"
   }
 }
