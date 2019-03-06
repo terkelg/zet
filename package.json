@@ -1,6 +1,6 @@
 {
   "name": "zet",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "repository": "terkelg/zet",
   "description": "Like Set() but with union, intersect, and difference built-in",
   "module": "dist/zet.mjs",
