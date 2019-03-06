@@ -26,6 +26,6 @@
     "mkdirplz": "1.0.0",
     "rewrite-imports": "^2.0.1",
     "tap-spec": "^5.0.0",
-    "tape": "^4.10.0"
+    "tape": "^4.10.1"
   }
 }
