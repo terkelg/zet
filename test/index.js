@@ -81,9 +81,22 @@ test('static :: superset ⊇', t => {
   t.end();
 });
 
+test('static :: map', t => {
+  let x = new Zet([1,4,9,16]);
+  eq(t, Zet.map(x, i => i * 2), [2,8,18,32]);
+  t.end();
+});
+
 test('static :: filter', t => {
   let x = new Zet([1,2,3]);
   eq(t, Zet.filter(x, i => i % 2), [1, 3]);
+  t.end();
+});
+
+test('static :: reduce', t => {
+  let x = new Zet([1,2,3,4]);
+  t.is(Zet.reduce(x, (i, j) => i + j), 10);
+  t.is(Zet.reduce(x, (i, j) => i + j, 5), 15);
   t.end();
 });
 
@@ -150,8 +163,21 @@ test('instance :: superset ⊇', t => {
   t.end();
 });
 
+test('instance :: map', t => {
+  let x = new Zet([1,4,9,16]);
+  eq(t, x.map(i => i * 2), [2,8,18,32]);
+  t.end();
+});
+
 test('instance :: filter', t => {
   let x = new Zet([1,2,3]);
   eq(t, x.filter(i => i % 2), [1, 3]);
+  t.end();
+});
+
+test('instance :: reduce', t => {
+  let x = new Zet([1,2,3,4]);
+  t.is(x.reduce((i, j) => i + j), 10);
+  t.is(x.reduce((i, j) => i + j, 5), 15);
   t.end();
 });

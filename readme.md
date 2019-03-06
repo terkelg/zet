@@ -28,7 +28,9 @@ ECMAScript 6 sets have no methods for computing the union (∪), intersection (�
 - **⊖** symmetric difference
 - **⊆** subset
 - **⊇** superset
+- map
 - filter
+- reduce
 
 
 ## Install
@@ -152,6 +154,21 @@ Type: `Zet|Set`
 
 Set of type `Zet` or `Set`.
 
+### map(set, func)
+Returns: `Zet|Set`
+
+Creates a set with the results of calling the provided function on every element.
+
+#### set
+Type: `Zet|Set`
+
+Set of type `Zet` or `Set`.
+
+#### func
+Type: `Function`
+
+Function that produces an element of the new set.
+
 ### filter(set, func)
 Returns: `Zet|Set`
 
@@ -165,6 +182,26 @@ It is the set going to be examined.
 Type: `Function`
 
 It is a predicate, to test each element of the set.
+
+### reduce(set, func, *initializer*)
+Returns: `Number`
+
+Reduces the set to a single value, by executing the provided function for each element in the set (from left-to-right).
+
+#### set
+Type: `Zet|Set`
+
+Set of type `Zet` or `Set`.
+
+#### func
+Type: `Function`
+
+Function to be executed for each element in the set.
+
+#### *initializer*
+Type: `Number`
+
+Optional. A value to be passed to the function as the initial value.
 
 ## Instance Methods
 
@@ -228,6 +265,16 @@ Type: `Zet|Set`
 
 Set of type `Zet` or `Set`.
 
+### map(func)
+Returns: `Zet|Set`
+
+Creates a set with the results of calling the provided function on every element.
+
+#### func
+Type: `Function`
+
+Function that produces an element of the new set.
+
 ### filter(func)
 Returns: `Zet|Set`
 
@@ -237,6 +284,21 @@ Creates a set with all elements that pass the test implemented by the provided f
 Type: `Function`
 
 It is a predicate, to test each element of the set.
+
+### reduce(func, *initializer*)
+Returns: `Number`
+
+Reduces the set to a single value, by executing the provided function for each element in the set (from left-to-right).
+
+#### func
+Type: `Function`
+
+Function to be executed for each element in the set.
+
+#### *initializer*
+Type: `Number`
+
+Optional. A value to be passed to the function as the initial value.
 
 ## License
 

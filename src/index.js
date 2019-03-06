@@ -26,8 +26,17 @@ class Zet extends Set {
     return [...setB].every(x => setA.has(x));
   }
 
+  static map(set, func) {
+    return new Zet([...set].map(func));
+  }
+
   static filter(set, func) {
     return new Zet([...set].filter(func));
+  }
+
+  static reduce(set, func, initializer) {
+    if (initializer === undefined) return [...set].reduce(func);
+    return [...set].reduce(func, initializer);
   }
 
   union(...sets) {
@@ -54,8 +63,16 @@ class Zet extends Set {
     return Zet.superset(this, other);
   }
 
+  map(func) {
+    return Zet.map(this, func);
+  }
+
   filter(func) {
     return Zet.filter(this, func);
+  }
+
+  reduce(func, initializer) {
+    return Zet.reduce(this, func, initializer);
   }
 }
 
