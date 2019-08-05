@@ -24,8 +24,8 @@
   ],
   "devDependencies": {
     "mkdirplz": "1.0.0",
-    "rewrite-imports": "^2.0.1",
+    "rewrite-imports": "^2.0.3",
     "tap-spec": "^5.0.0",
-    "tape": "^4.10.1"
+    "tape": "^4.11.0"
   }
 }
