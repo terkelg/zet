@@ -40,7 +40,6 @@ Additions to the default ECMAScript 6 set
 - Map
 - Filter
 - Reduce
-- ... with no dependenceis
 
 
 Additionally, this module is delivered as:
