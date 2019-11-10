@@ -31,12 +31,12 @@ The API is similar to how sets work in [Python](https://docs.python.org/2/librar
 
 Additions to the default ECMAScript 6 set
 
-- ∪ union
-- ∩ intersection
-- - difference/subtract
-- ⊖ symmetric difference
-- ⊆ subset
-- ⊇ superset
+- Union (∪)
+- Intersection (∩)
+- Difference/subtract (-)
+- Symmetric difference (⊖)
+- Subset (⊆)
+- Superset (⊇)
 - Map
 - Filter
 - Reduce
