@@ -20,8 +20,6 @@
   </a>
 </p>
 
-https://badgen.now.sh/codecov/c/github/terkelg/stopgap)](https://codecov.io/gh/terkelg/stopgap)
-
 <p align="center"><b>JavaScript Set() as it should be.</b></p>
 
 ECMAScript 6 sets have no methods for computing the union (∪), intersection (∩) or difference (⊖).
