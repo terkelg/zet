@@ -6,31 +6,50 @@
   <a href="https://npmjs.org/package/zet">
     <img src="https://badgen.now.sh/npm/v/zet" alt="version" />
   </a>
-  <a href="https://travis-ci.org/terkelg/zet">
-    <img src="https://badgen.now.sh/travis/terkelg/zet" alt="travis" />
+  <a href="https://badgen.now.sh/github/status/terkelg/zet">
+    <img src="https://github.com/terkelg/zet/actions" alt="build status" />
   </a>
-  <a href="https://npmjs.org/package/zet">
+  <a href="https://codecov.io/gh/terkelg/zet">
+    <img src="https://badgen.now.sh/codecov/c/github/terkelg/zet" alt="codecov" />
+  </a>
+  <!--<a href="https://npmjs.org/package/zet">
     <img src="https://badgen.now.sh/npm/dm/zet" alt="downloads" />
-  </a>
+  </a>-->
   <a href="https://packagephobia.now.sh/result?p=zet">
     <img src="https://packagephobia.now.sh/badge?p=zet" alt="install size" />
   </a>
 </p>
 
+https://badgen.now.sh/codecov/c/github/terkelg/stopgap)](https://codecov.io/gh/terkelg/stopgap)
+
 <p align="center"><b>JavaScript Set() as it should be.</b></p>
 
-ECMAScript 6 sets have no methods for computing the union (∪), intersection (∩) or difference (⊖). Zet is an extension of ES6 [`Set`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) and comes with all its functionality included. The API is similar to how sets work in [Python](https://docs.python.org/2/library/stdtypes.html#set).
+ECMAScript 6 sets have no methods for computing the union (∪), intersection (∩) or difference (⊖).
+Zet is an extension of ES6 [`Set`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) and comes with all its functionality included with extra set logic.
+The API is similar to how sets work in [Python](https://docs.python.org/2/library/stdtypes.html#set).
 
-**Additions to the default ECMAScript 6 set**
-- **∪** union
-- **∩** intersection
-- **-** difference/subtract
-- **⊖** symmetric difference
-- **⊆** subset
-- **⊇** superset
-- map
-- filter
-- reduce
+
+## Features
+
+Additions to the default ECMAScript 6 set
+
+- ∪ union
+- ∩ intersection
+- - difference/subtract
+- ⊖ symmetric difference
+- ⊆ subset
+- ⊇ superset
+- Map
+- Filter
+- Reduce
+- ... with no dependenceis
+
+
+Additionally, this module is delivered as:
+
+* **ES Module**: `dist/zet.mjs`
+* **CommonJS**: `dist/zet.js`
+* **UMD**: `dist/zet.umd.js`
 
 
 ## Install
@@ -43,7 +62,7 @@ $ npm install --save zet
 ## Usage
 
 ```js
-const Zet = require('zet');
+import Zet from 'zet';
 
 let a = new Zet([1, 2, 3]);
 let b = new Zet([3, 4, 5]);

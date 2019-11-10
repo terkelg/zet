@@ -1,5 +1,5 @@
-const test = require('tape');
-const Zet = require('../dist/zet');
+import test from 'tape';
+import Zet from '../src';
 
 const eq = (t, a, b) => {
   a = [...a.values()];

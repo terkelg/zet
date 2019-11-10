@@ -1,4 +1,4 @@
-class Zet extends Set {
+export default class Zet extends Set {
   static union(...sets) {
     return new Zet(sets.reduce((a, i) => [...a, ...i]));
   }
@@ -75,5 +75,3 @@ class Zet extends Set {
     return Zet.reduce(this, func, initializer);
   }
 }
-
-export default Zet;
