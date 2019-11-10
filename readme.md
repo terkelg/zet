@@ -112,7 +112,7 @@ Two or more sets of type `Zet` or `Set`.
 ### Zet.symmetricDifference(setA, setB) ⊖ or ∆
 Returns:`zet`
 
-Static funciont that return a new set with elements in either setA or setB but not both.
+Static function that return a new set with elements in either setA or setB but not both.
 
 #### setA
 Type: `Zet|Set`
