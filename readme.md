@@ -6,8 +6,8 @@
   <a href="https://npmjs.org/package/zet">
     <img src="https://badgen.now.sh/npm/v/zet" alt="version" />
   </a>
-  <a href="https://badgen.now.sh/github/status/terkelg/zet">
-    <img src="https://github.com/terkelg/zet/actions" alt="build status" />
+  <a href="https://github.com/terkelg/zet/actions">
+    <img src="https://badgen.now.sh/github/status/terkelg/zet" alt="build status" />
   </a>
   <a href="https://codecov.io/gh/terkelg/zet">
     <img src="https://badgen.now.sh/codecov/c/github/terkelg/zet" alt="codecov" />
